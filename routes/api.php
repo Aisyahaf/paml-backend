@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\CustomerController;
 use App\Http\Controllers\API\DeliveryController;
 use App\Http\Controllers\API\NotaController;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+// Route::post('/login',[AuthController::class, 'login'])->name('login');
+// Route::post('/register',[AuthController::class, 'register'])->name('register');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
